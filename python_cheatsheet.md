@@ -280,6 +280,31 @@ Examples:
 #Declares an example dictionary
 my_dict = {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48}
 
+#Get works like the subscripting method but will not throw an error if key is not in the dictionary
+result = my_dict.get('name')
+#                               result: 'smith'
+
+#Get works like the subscripting method but will not throw an error if key is not in the dictionary
+result = my_dict.get('not_in')
+#                               result: None
+
+#Searches for a key, if it is found, the value is returned, otherwise the key is added with a default value.
+#Usage dict.setdefault(key, default_value)
+result = my_dict.setdefault('name')
+#                               result: 'smith'
+
+#Searches for a key, if it is found, the value is returned, otherwise the key is added with a default value.
+#Usage dict.setdefault(key, default_value)
+result = my_dict.setdefault('hat')
+#                               result: None
+#                               my_dict: {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48, 'hat': None}
+
+#Searches for a key, if it is found, the value is returned, otherwise the key is added with a default value.
+#Usage dict.setdefault(key, default_value)
+result = my_dict.setdefault('hat', 'Yes')
+#                               result: None
+#                               my_dict: {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48, 'hat': 'Yes'}
+
 #Adds or updates elements in the dict. Usage is dict_name.update(dictionary)
 my_dict.update({'new': 10})
 #                               my_dict: {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48, 'new': 10}
@@ -298,7 +323,11 @@ removed = my_dict.popitem()
 #                               removed: ('weight': 48)
 #                               my_dict: {'name': 'smith', 'age': 3, 'height': 12}
 
-#Removes all elements from the dict
-my_dict.clear()
-#                               my_dict: None
+#The fromkeys method returns a dictionary so we use the dict keyword as the dict we are calling the method on.
+#The fromkeys method does not modify the dictionary it is called on.
+#Usage is dict.fromkeys(iterable_data, default_value) if no default value is supplied, None will be the default.
+new_dict = dict.fromkeys([1,2,3,4], 'Default')
+#                               new_dict = {1: 'Default', 2: 'Default', 3: 'Default', 4: 'Default'}
+
+my_dict.clear()                 #Removes all elements from the dict      my_dict: None
 ```
