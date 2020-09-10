@@ -4,6 +4,8 @@
 
 # PYTHON BUILT-IN DATA STRUCTURES CHEAT SHEET
 
+## Authored by Adam Hamilton-Sutherland
+
 ## LISTS
 
 ### List Declaration
