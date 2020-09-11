@@ -1,5 +1,9 @@
 # INDEX FOR ALL PYTHON CHEAT SHEETS
 
+All cheat sheets are beginner friendly and are full of examples.
+
+All cheat sheets are written and maintained by Adam Hamilton-Sutherland
+
 ## BUILT-IN DATA STRUCTURES
 
 ### This cheat sheet has a detailed guide on the creation and use of Lists, Tuples, Sets and Dictionaries.
