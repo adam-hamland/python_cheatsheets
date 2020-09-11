@@ -75,7 +75,7 @@ outside_list = my_list[-4]      #Indexes my_list at -4.                  IndexEr
 
 Methods are functions that are built-into classes. The list data structure has many useful methods.
 
-General syntax of list methods is as follows: list_name.method_name()
+General syntax of list methods is as follows: list_name.methodname()
 
 Examples:
 
@@ -192,7 +192,7 @@ outside_tuple = my_tuple[-4]    #Indexes my_tuple at -4.                 IndexEr
 
 Methods are functions that are built-into classes. Tuples don't have many because tuples can't be changed.
 
-General Syntax of tuple methods is as follows: tuple_name.method_name()
+General Syntax of tuple methods is as follows: tuple_name.methodname()
 
 Examples:
 
@@ -202,6 +202,90 @@ my_tuple = (1,2,3,4,99)         #Declares an example tuple.              my_tupl
 elements = my_tuple.count()     #Returns number of elements in a tuple.  elements: 5
 
 index = my_tuple.index(99)      #Returns the index of a tuple element.   index: 4
+```
+
+## SETS
+
+### Set Declaration
+
+Sets are ways to store multiple unique data elements of various types. Duplicate items are not allowed in sets. Sets, like lists and tuples, are iterables.
+
+Sets are unordered and mutable meaning ***can*** be changed after they are created.
+
+Sets are represented inside of curly brackets {}
+
+Examples:
+
+```python
+my_set = set()                  #Empty set.                              my_set: {}
+
+my_set = {}                     #Not an empty set, this is a dictionary, use the set() function for empty sets.
+
+my_set = {1,2,3,4}              #Set of ints.                            my_set: {1,2,3,4}
+
+my_set = {1,2,3,4,4,4,4}        #Set of ints. No duplicates.             my_set: {1,2,3,4}
+
+my_set = {"hello", "world"}     #Set of strings.                         my_set: {"hello", "world"}
+
+my_set = {"hello", "hello"}     #Set of strings. No duplicates.          my_set: {"hello"}
+
+my_set = {"hello", 1234}        #Set of strings and ints.                my_set: {"hello", 1234}
+
+my_set = {{1,2},{3,4}}          #Can't create a set of sets.             my_set: TypeError
+
+my_set = {[1,2],[3,4]}          #Can't create a set of lists.            my_set TypeError
+
+my_set = {(1,2,3),(4,5,6)}      #Sets can be made of tuples.             my_set: {(1,2,3),(4,5,6)}
+```
+
+### Testing Membership of a Set
+
+An element is a member of a set if it is in the set.
+
+To test if an element is in a set, you use the *in* keyword.
+
+General syntax is as follows: element *in* set_name
+
+Examples:
+
+```python
+my_set = {1,2,3,4}              #Declare an example set.                 my_set: {1,2,3,4}
+
+print(1 in my_set)              #Tests if 1 is in my_set.                True
+
+print(5 in my_set)              #Tests if 5 is in my_set.                False
+
+result = 5 not in my_set        #Test if 5 is NOT in my_set.             result: True
+```
+
+### Set Methods
+
+Methods are functions that are built-into classes. Sets have many mathematic methods.
+
+General Syntax of set methods is as follows: set_name.methodname()
+
+Examples:
+
+```python
+my_set = {1,2,3,4}              #Declare an example set .                my_set: {1,2,3,4}
+
+my_set.add(5)                   #Adds an element to a set.               my_set: {1,2,3,4,5}
+
+my_set.update(5,6,7)            #Adds elements of an iterable to a set.  my_set: {1,2,3,5,6,7}
+
+my_set.remove(2)                #Removes an element from a set.          my_set: {1,3,4}
+
+my_set.remove(99)               #Throws error of the element is not in the set.
+
+my_set.discard(2)               #Removes an element from a set.          my_set: {1,3,4}
+
+my_set.discard(99)              #No error if element is not in the set.  my_set: {1,2,3,4}
+
+result = my_set.pop()           #Removes and returns a random element.   my_set: {2,3,4} | result = 1
+
+my_set.clear()                  #Removes all elements from the set.      my_set: set()
+
+new_set = my_set.copy()         #Copies a set.                           new_set: {1,2,3,4}
 ```
 
 ## DICTIONARIES
@@ -274,7 +358,7 @@ f_name = my_dict['f_name']      #Retrieves value of key 'f_name'         f_name:
 
 Methods are functions that are built-into classes. The dictionary data structure has many useful methods.
 
-General syntax of dictionary methods is as follows: dict_name.method_name()
+General syntax of dictionary methods is as follows: dict_name.methodname()
 
 Examples:
 
