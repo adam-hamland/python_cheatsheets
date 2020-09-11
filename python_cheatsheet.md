@@ -286,6 +286,33 @@ result = my_set.pop()           #Removes and returns a random element.   my_set:
 my_set.clear()                  #Removes all elements from the set.      my_set: set()
 
 new_set = my_set.copy()         #Copies a set.                           new_set: {1,2,3,4}
+
+#Returns the difference of two sets. Subtracts the supplied set from the set difference was called on.
+diff_set = my_set.difference({3,4,5,6})
+#                               diff_set: {1,2}
+
+#Updates the set instead of returning a new set.
+my_set.difference_update({3,4,5,6})
+#                               my_set: {1,2}
+
+#Returns the intersection of two or more sets. Elements that occur in all sets will be returned.
+inter_set = my_set.intersection({3,4,5,6})
+ #                              inter_set: {3,4}
+
+#Updates the set instead of returning a new set.
+ my_set.intersection_update({3,4,5,6})
+ #                              my_set: {3,4}
+
+ #Returns true if the two sets are disjointed and false otherwise. Disjointed sets have no common elements.
+result = my_set.isdisjoint({10,11,12,13})
+#                               result = True
+
+#Returns true if the set the method is called on, is a subset of the supplied set. Otherwise returns false.
+result = my_set.issubset({2,3})
+#                               result = False
+
+result = my_set.issubset({0,1,2,3,4,5})
+#                               result = True
 ```
 
 ## DICTIONARIES
