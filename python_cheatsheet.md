@@ -287,32 +287,60 @@ my_set.clear()                  #Removes all elements from the set.      my_set:
 
 new_set = my_set.copy()         #Copies a set.                           new_set: {1,2,3,4}
 
+#The following methods accept a set as an argument. The sets will be hardcoded in for readability.
+#You can of course pass in the name of a set as an argument instead of a hardcoded set.
+
 #Returns the difference of two sets. Subtracts the supplied set from the set difference was called on.
+#my_set is having the set {3,4,5,6} subtracted from it.
 diff_set = my_set.difference({3,4,5,6})
 #                               diff_set: {1,2}
 
-#Updates the set instead of returning a new set.
+#Updates the set instead of returning a new set..
 my_set.difference_update({3,4,5,6})
 #                               my_set: {1,2}
 
 #Returns the intersection of two or more sets. Elements that occur in all sets will be returned.
 inter_set = my_set.intersection({3,4,5,6})
- #                              inter_set: {3,4}
+#                               inter_set: {3,4}
 
 #Updates the set instead of returning a new set.
  my_set.intersection_update({3,4,5,6})
- #                              my_set: {3,4}
+#                               my_set: {3,4}
 
- #Returns true if the two sets are disjointed and false otherwise. Disjointed sets have no common elements.
+#Returns true if the two sets are disjointed and false otherwise. Disjointed sets have no common elements.
 result = my_set.isdisjoint({10,11,12,13})
-#                               result = True
+#                               result: True
 
 #Returns true if the set the method is called on, is a subset of the supplied set. Otherwise returns false.
+#A set is a subset if all elements in the subset are in the parent set.
+#Read statement as: is my_set a subset of {2,3}
 result = my_set.issubset({2,3})
-#                               result = False
+#                               result: False
 
+#Read statement as: is my_set a subset of {0,1,2,3,4,5}
 result = my_set.issubset({0,1,2,3,4,5})
-#                               result = True
+#                               result: True
+
+#Returns true if the set the method is called on, is a superset of the supplied set. Otherwise returns false.
+#A set is a superset of a set if all elements in the set are within the superset.
+#Read statement as: is my_set a super set of {2,3}
+result = my_set.issuperset({2,3})
+#                               result: True
+
+result = my_set.issuperset({0,1,2,3,4,5})
+#                               result: False
+
+#Returns the symmetric difference of two sets. Only elements that are NOT in both sets will be returned.
+sym_set = my_set.symmetric_difference({2,3,4,5})
+#                               sym_set: {1,5}
+
+#Updates the set instead of returning a new set.
+my_set.symmetric_difference_update({2,3,4,5})
+#                               my_set: {1,5}
+
+#Returns a set containing all unique elements from 2 or more sets.
+union_set = my_set.union({0,1,2,3,4,5}, {4,5,6,7})
+#                               union_set: {0, 1, 2, 3, 4, 5, 6, 7}
 ```
 
 ## DICTIONARIES
