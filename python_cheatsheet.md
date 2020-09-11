@@ -10,7 +10,7 @@
 
 ### List Declaration
 
-Lists are a way of storing multiple elements of data. Lists are one of many iterables.
+Lists are a way of storing multiple elements of data. Lists are one of many iterable data structures.
 
 Lists can store data of any type and even contain multiple different types of data.
 
@@ -279,39 +279,39 @@ General syntax of dictionary methods is as follows: dict_name.method_name()
 Examples:
 
 ```python
-#Declares an example dictionary
+#Declares an example dictionary.
 my_dict = {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48}
 
-#Get works like the subscripting method but will not throw an error if key is not in the dictionary
+#Get works like the subscripting method but will not throw an error if key is not in the dictionary.
 result = my_dict.get('name')
 #                               result: 'smith'
 
-#Get works like the subscripting method but will not throw an error if key is not in the dictionary
+#Get works like the subscripting method but will not throw an error if key is not in the dictionary.
 result = my_dict.get('not_in')
 #                               result: None
 
 #Searches for a key, if it is found, the value is returned, otherwise the key is added with a default value.
-#Usage dict.setdefault(key, default_value)
+#Usage dict.setdefault(key, default_value).
 result = my_dict.setdefault('name')
 #                               result: 'smith'
 
 #Searches for a key, if it is found, the value is returned, otherwise the key is added with a default value.
-#Usage dict.setdefault(key, default_value)
+#Usage dict.setdefault(key, default_value).
 result = my_dict.setdefault('hat')
 #                               result: None
 #                               my_dict: {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48, 'hat': None}
 
 #Searches for a key, if it is found, the value is returned, otherwise the key is added with a default value.
-#Usage dict.setdefault(key, default_value)
+#Usage dict.setdefault(key, default_value).
 result = my_dict.setdefault('hat', 'Yes')
 #                               result: None
 #                               my_dict: {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48, 'hat': 'Yes'}
 
-#Adds or updates elements in the dict. Usage is dict_name.update(dictionary)
+#Adds or updates elements in the dictionary. Usage is dict_name.update(dictionary).
 my_dict.update({'new': 10})
 #                               my_dict: {'name': 'smith', 'age': 3, 'height': 12, 'weight': 48, 'new': 10}
 
-#Adds or updates elements in the dict. Usage is dict_name.update(dictionary)
+#Adds or updates elements in the dictionary. Usage is dict_name.update(dictionary).
 my_dict.update({'name': 'john'})
 #                               my_dict: {'name': 'john', 'age': 3, 'height': 12, 'weight': 48}
 
@@ -331,5 +331,20 @@ removed = my_dict.popitem()
 new_dict = dict.fromkeys([1,2,3,4], 'Default')
 #                               new_dict = {1: 'Default', 2: 'Default', 3: 'Default', 4: 'Default'}
 
-my_dict.clear()                 #Removes all elements from the dict      my_dict: None
+#The items method returns a dictionary view with all items in the dictionary in a list of tuples.
+#To make the dict_items object into a list that can be indexed, wrap it in the list function.
+result = list(my_dict.items())
+#                               result: [('name', 'smith'), ('age', 3), ('height', 12), ('weight', 48)]
+
+#The keys method returns an object with a list of keys from the dictionary.
+#To make the dict_keys object into a list that can be indexed, wrap it in the list function.
+result = list(my_dict.keys())
+#                               result: ['name', 'age', 'height', 'weight']
+
+#The values method returns an object with a list of values from the dictionary.
+#To make the dict_values object into a list that can be indexed, wrap it in the list function.
+result = list(my_dict.values())
+#                               result: ['smith', 3, 12, 48]
+
+my_dict.clear()                 #Removes all elements from the dict.     my_dict: None
 ```
