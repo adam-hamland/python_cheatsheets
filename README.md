@@ -1,4 +1,4 @@
-# INDEX FOR ALL PYTHON CHEAT SHEETS
+# PYTHON CHEAT SHEET INDEX
 
 All cheat sheets are beginner friendly and are full of examples.
 
