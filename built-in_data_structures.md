@@ -108,7 +108,7 @@ new_list = my_list.copy()       #Returns a copy of a list.               new_lis
 
 elements = my_list.count()      #Returns number of elements in a list.   elements: 5
 
-index = my_list.index(99)        #Returns the index of a list element.    index: 4
+index = my_list.index(99)       #Returns the index of a list element.    index: 4
 ```
 
 ## TUPLES
